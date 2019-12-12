@@ -34,6 +34,7 @@ public class BigOperationWorker {
                 final BigOperation bigOp = (BigOperation) messageConverter.fromMessage(message);
 
                 // simply printing out the operation, but expensive computation could happen here
+                System.out.println(bigOp.getName().toUpperCase());
                 System.out.println("Received from RabbitMQ: " + bigOp);
             }
         });
